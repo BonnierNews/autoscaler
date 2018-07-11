@@ -72,6 +72,10 @@ Cluster Autoscaler decreases the size of the cluster when some nodes are consist
 * Pods with local storage.
 * Pods that cannot be moved elsewhere due to various constraints (lack of resources, non-matching node selctors or affinity,
 matching anti-affinity, etc)
+* Pods that have the following annotation set:
+```
+"cluster-autoscaler.kubernetes.io/safe-to-evict": "false"
+```
 
 ### How does Horizontal Pod Autoscaler work with Cluster Autoscaler?
 
